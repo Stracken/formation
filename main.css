@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+img {
+width: 20%;
+}
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+article{
+     display: flex;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
