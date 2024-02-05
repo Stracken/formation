@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="10.css" rel="stylesheet">
+</head>
+<body>
+    <button onclick="myFunction()">Afficher</button>
+
+    <div id="myDIV" class="mystyle">
+      This is a DIV element.
+    </div> 
+    <script>
+        function myFunction() {
+            let element = document.getElementById("myDIV");
+            element.classList.remove("mystyle");
+        }
+    </script>
+    <button onclick="H()">Toggle</button>
+
+    <div id="hide">
+    This is my DIV element.
+    </div>    
+    <script>
+    function H() {
+      let x = document.getElementById("hide");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+    <button onclick="C()">Couleur</button>
+    <div id="Color" class="">
+        I am colorful!
+    </div>
+    <script>
+        function C() {
+            let x = document.getElementById("Color");
+            x.classList.add("rouge");
+        }
+    </script>
+</body>
+</html>
