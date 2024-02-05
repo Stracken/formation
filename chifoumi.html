@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIFOUMI</title>
+</head>
+<body>
+    <script>
+        let i=0;
+        let w=0;
+        const array = ["Pierre","Feuille","Ciseaux"]
+        while (i<5){
+            console.log(w)
+            let randomIndex = Math.floor(Math.random() * array.length);
+            let O = array[randomIndex];
+            let U = prompt("Pierre Feuille Ciseaux !");
+            if ( U === "Pierre"){
+                if(O==="Pierre"){
+                    alert("Egalité");
+                }
+                else if(O==="Feuille"){
+                    alert("Vous perdu!");
+                    i++;
+                }
+                else{
+                    i++;
+                    w++;
+                    alert("vous gagnez!");
+                }
+            }
+            else if(U === "Feuille"){
+                if(O === "Pierre"){
+                    alert("Vous gagnez!");
+                    i++;
+                    w++;
+                }
+                else if(O === "Feuille"){
+                    alert("Egalité");
+                }
+                else{
+                    alert("Vous perdu!");
+                    i++;
+                }
+            }
+            else if(U === "Ciseaux"){
+                if(O==="Pierre"){
+                    alert("Vous perdu!");
+                    i++;
+                }
+                else if(O==="Feuille"){
+                    alert("Vous gagnez!");
+                    i++;
+                    w++;
+                }
+                else {
+                    alert("Egalité");
+                }
+            }
+            else{
+                alert("Erreur de saisie, veuillez répondre à Pierre Feuille ou Ciseaux.");
+            }
+        }
+        if(w>=3){
+            alert("Félicitations vous avez gagné le match!");
+        }
+        else{
+            alert("Vous avez perdu le match...");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="tp.css" rel="stylesheet">
+</head>
+<body>
+    <button onclick="x()">Explications</button>
+    <div>
+        <button onclick="m()">-</button>
+        <button onclick="p()">+</button>
+    </div>
+    <script>
+  function x() {
+    swal("Clique sur galerie pour faire apparaitre le caroussel");
+  }
+
+  var img = ["https://imgur.com/AMgxf7j.png","https://cdn-s-www.lalsace.fr/images/254C13BC-B0C8-499A-A64E-D7BFFAD4D385/NW_raw/brad-pitt-et-edward-norton-dans-un-face-a-face-devenu-culte-photo-splendor-films-1643411879.jpg","https://en.free-wallpapers.su/data/media/2857/big/mv9776.jpg"];
+  let i = 0;
+  var imgElement = document.createElement("img");
+  imgElement.src = img[i];
+  document.body.appendChild(imgElement);
+  function m(){
+    if (i === 0 ){
+      i = img.length;
+    }
+    i = i - 1;
+    var imgElement = document.createElement("img");
+  imgElement.src = img[i];
+  // Remove all existing images
+  var existingImages = document.getElementsByTagName("img");
+  while (existingImages.length > 0) {
+    existingImages[0].parentNode.removeChild(existingImages[0]);
+  }
+  document.body.appendChild(imgElement);
+  }
+  function p(){
+    i++
+    if(i === img.length){
+      i = 0;
+    }
+    var imgElement = document.createElement("img");
+  imgElement.src = img[i];
+  // Remove all existing images
+  var existingImages = document.getElementsByTagName("img");
+  while (existingImages.length > 0) {
+    existingImages[0].parentNode.removeChild(existingImages[0]);
+  }
+  document.body.appendChild(imgElement);
+  }
+    </script>
+</body>
+</html>
